@@ -24,3 +24,5 @@
     - [Memodifikasi Cancel Reason](./cancel-reason/memodifikasi.md)    
     - [Menonaktifkan Cancel Reason](./cancel-reason/menonaktifkan.md)    
     - [Menghapus Cancel Reason](./cancel-reason/menghapus.md)    
+- [Cancel Reason Configurator](./cancel-reason-configurator.md)    
+    - [Memodifikasi Cancel Reason Configurator](./cancel-reason-configurator/memodifikasi.md)    
