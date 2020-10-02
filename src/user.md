@@ -1,8 +1,6 @@
 # User
 
-Menu ini digunakan untuk mengatur daftar user yang akan menggunakan aplikasi ini.
-
-Menu ini dibagi menjadi beberapa transaksi sebagai berikut:
+**User** adalah fitur yang digunakan untuk mengatur daftar user yang akan menggunakan aplikasi ini.
 
 - [Penjelasan User](./user/penjelasan.md)
 - [Membuat User Non-Portal](./user/membuat-non-portal.md)
