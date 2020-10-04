@@ -10,15 +10,15 @@
 2. Buka data *User* yang akan dihapus. Abaikan jika data sudah dibuka.
 3. Klik tombol **More** pada bagian atas-tengah form.
 
-![](../../img/user/tombol-more.png)
+![](../img/user/tombol-more.png)
 
 4. Klik tombol **Delete** pada *dropdown* yang muncul ketika tombol **More** diklik.
 
-![](../../img/user/tombol-more-delete.png)
+![](../img/user/tombol-more-delete.png)
 
 5. Klik tombol **Ok** pada *pop-up* konfirmasi penghapusan yang muncul.
 
-![](../../img/user/pop-up-konfirmasi-delete.png)
+![](../img/user/pop-up-konfirmasi-delete.png)
 
 ## C. OUTPUT
 
