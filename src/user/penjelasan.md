@@ -10,7 +10,7 @@ Informasi pada Menu User dibagi menjadi beberapa area, diantaranya:
 
 ### <a name="bagian-header">HEADER</a>
 
-![](../../img/user/header.png)
+![](../img/user/header.png)
 
 #### <a name="field-name">Name</a>
 
@@ -26,7 +26,7 @@ Penanda status User aktif
 
 ### <a name="tab-role">TAB ROLE</a>
 
-![](../../img/user/tab-role.png)
+![](../img/user/tab-role.png)
 
 #### <a name="field-role">Role</a>
 
@@ -46,9 +46,9 @@ Status aktif Role
 
 ### <a name="tab-access-rights">TAB ACCESS RIGHTS</a>
 
-![](../../img/user/tab-access-rights.png)
-![](../../img/user/tab-access-rights-2.png)
-![](../../img/user/tab-access-rights-3.png)
+![](../img/user/tab-access-rights.png)
+![](../img/user/tab-access-rights-2.png)
+![](../img/user/tab-access-rights-3.png)
 
 #### <a name="field-application">Application</a>
 
@@ -76,7 +76,7 @@ Pengaturan fitur lainnya yang dapat diakses dan digunakan oleh User
 
 ### <a name="tab-oauth">TAB OAUTH</a>
 
-![](../../img/user/tab-oauth.png)
+![](../img/user/tab-oauth.png)
 
 #### <a name="field-oauth-provider">OAuth Provider</a>
 
@@ -92,9 +92,9 @@ Pengaturan informasi token akses OAuth
 
 ### <a name="tab-preference">TAB PREFERENCE</a>
 
-![](../../img/user/tab-preference.png)
-![](../../img/user/tab-preference2.png)
-![](../../img/user/tab-preference3.png)
+![](../img/user/tab-preference.png)
+![](../img/user/tab-preference2.png)
+![](../img/user/tab-preference3.png)
 
 #### <a name="field-localization">Localization</a>
 

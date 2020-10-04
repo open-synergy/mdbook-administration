@@ -10,7 +10,7 @@
 2. Buka data *User* yang akan dimodifikasi. Abaikan jika data sudah dibuka.
 3. Klik tombol **Edit** pada bagian atas-kiri form.
 
-![](../../img/user/tombol-edit.png)
+![](../img/user/tombol-edit.png)
 
 4. Isi dan sesuaikan **[Name](./penjelasan.md#field-name)** jika dibutuhkan. Wajib diisi.
 5. Isi dan sesuaikan **[Email Address](./penjelasan.md#field-email)** jika dibutuhkan. Wajib diisi.
@@ -33,7 +33,7 @@
 22. Isi dan sesuaikan **[Authentication Apps/Devices](./penjelasan.md#field-mfa-settings)** jika dibutuhkan. Tidak wajib diisi.
 23. Klik tombol **Save** pada bagian atas-kiri form.
 
-![](../../img/user/tombol-save-modifikasi.png)
+![](../img/user/tombol-save-modifikasi.png)
 
 ## C. OUTPUT
 

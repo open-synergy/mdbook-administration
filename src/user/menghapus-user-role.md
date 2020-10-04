@@ -10,13 +10,13 @@
 2. Buka data *User* yang akan dihapus *Role* nya. Abaikan jika data sudah dibuka.
 3. Klik tombol **Edit** pada bagian atas-kiri form.
 
-![](../../img/user/tombol-edit.png)
+![](../img/user/tombol-edit.png)
 
 4. Beralih ke tab **[Role](./penjelasan.md#tab-role)**
 5. <a name="l9">[Tambah](./menambah-user-role.md)/[Modifikasi](./memodifikasi-user-role.md)/[Hapus](./menghapus-user-role.md)</a>  **Role**. Ulangi langkah ini sampai **Role** sesuai dengan keinginan.
 6. Klik tombol **Save** pada bagian atas-kiri form.
 
-![](../../img/user/tombol-save-modifikasi.png)
+![](../img/user/tombol-save-modifikasi.png)
 
 ## C. OUTPUT
 

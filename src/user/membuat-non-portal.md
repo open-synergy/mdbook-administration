@@ -9,7 +9,7 @@
 1. Buka menu **Setting -> User -> User**. Abaikan jika sudah berada pada menu yang dimaksud.
 2. Klik tombol **Create** pada bagian atas-kiri form.
 
-![](../../img/user/tombol-create.png)
+![](../img/user/tombol-create.png)
 
 3. Isi **[Name](./penjelasan.md#field-name)**. Wajib diisi.
 4. Isi **[Email Address](./penjelasan.md#field-email)**. Wajib diisi.
@@ -32,7 +32,7 @@
 21. Isi **[Authentication Apps/Devices](./penjelasan.md#field-mfa-settings)**. Tidak wajib diisi.
 22. Klik tombol **Save** pada bagian atas-kiri form.
 
-![](../../img/user/tombol-save.png)
+![](../img/user/tombol-save.png)
 
 ## C. OUTPUT
 
