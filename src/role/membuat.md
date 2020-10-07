@@ -12,7 +12,9 @@
 ![](../img/role/tombol-create.png)
 
 3. Isi **[Name](./penjelasan.md#field-name)**. Wajib diisi.
-4. Klik tombol **Save** pada bagian atas-kiri form.
+4. Beralih ke tab **[Groups](./penjelasan.md#tab-groups)**.
+5. <a name="l9">[Tambah](./menambah-group.md)/[Hapus](./menghapus-group.md)</a>  **Group Role**. Ulangi langkah ini sampai **Group Role** sesuai dengan keinginan.
+6. Klik tombol **Save** pada bagian atas-kiri form.
 
 ![](../img/role/tombol-save.png)
 
