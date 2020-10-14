@@ -4,5 +4,5 @@
 
 - [Penjelasan Cancel Reason Configuration](./cancel-reason-configurator/penjelasan.md)
 - [Memodifikasi Cancel Reason Configuration](./cancel-reason-configurator/memodifikasi.md)
-- Menambah Cancel Reason (to-do belum ada .md nya)
-- Menghapus Cancel Reason (to-do belum ada .md nya)
+- Menambah Cancel Reason
+- Menghapus Cancel Reason
