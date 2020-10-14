@@ -2,9 +2,9 @@
 
 ## A. INPUT
 
-* Data *Audit Rules* yang akan dimatikan harus memiliki status **Draft**
+* Data *Audit Rules* yang akan dimatikan harus memiliki status **Subscribed**.
 
-![](../img/audit-rules/status-input-draft.png)
+![](../img/audit-rules/status-input-subscribed.png)
 
 ## B. LANGKAH KERJA
 

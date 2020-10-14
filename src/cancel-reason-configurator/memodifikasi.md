@@ -13,7 +13,7 @@
 ![](../img/cancel-reason-configurator/tombol-edit.png)
 
 4. Beralih ke tab **[Reasons](./penjelasan.md#tab-reasons)**.
-5. Tambah (to-do belum ada .md nya)/ Hapus (to-do belum ada .mdnya) **Cancel Reason**. Ulangi langkah ini sampai **Cancel Reason** sesuai dengan keinginan.
+5. Tambah/Hapus **Cancel Reason**. Ulangi langkah ini sampai **Cancel Reason** sesuai dengan keinginan.
 6. Beralih ke tab **[Notes](./penjelasan.md#tab-notes)**.
 7. Isi dan sesuaikan **[Notes](./penjelasan.md#tab-notes)** jika dibutuhkan. Tidak wajib diisi.
 8. Klik tombol **Save** pada bagian atas-kiri form.
