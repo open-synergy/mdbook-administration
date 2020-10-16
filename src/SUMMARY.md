@@ -41,3 +41,4 @@
     - [Memodifikasi Sequence](./sequence/memodifikasi.md)        
     - [Menghapus Sequence](./sequence/menghapus.md)        
     - [Menonaktifkan Sequence](./sequence/menonaktifkan.md)           
+    - [Membuat Cron Untuk Mereset Sequence](./sequence/membuat-cron.md)      
