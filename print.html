@@ -1,0 +1,1157 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Odoo - Administration</title>
+        
+        <meta name="robots" content="noindex" />
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        
+        <link rel="stylesheet" href="css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="user.html"><strong aria-hidden="true">1.</strong> User</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="user/penjelasan.html"><strong aria-hidden="true">1.1.</strong> Penjelasan User</a></li><li class="chapter-item expanded "><a href="user/membuat-non-portal.html"><strong aria-hidden="true">1.2.</strong> Membuat User Non-Portal</a></li><li class="chapter-item expanded "><a href="user/membuat-portal.html"><strong aria-hidden="true">1.3.</strong> Membuat User Portal</a></li><li class="chapter-item expanded "><a href="user/memodifikasi.html"><strong aria-hidden="true">1.4.</strong> Memodifikasi User</a></li><li class="chapter-item expanded "><a href="user/menambah-user-role.html"><strong aria-hidden="true">1.5.</strong> Menambah User Role</a></li><li class="chapter-item expanded "><a href="user/memodifikasi-user-role.html"><strong aria-hidden="true">1.6.</strong> Memodifikasi User Role</a></li><li class="chapter-item expanded "><a href="user/menghapus-user-role.html"><strong aria-hidden="true">1.7.</strong> Menghapus User Role</a></li><li class="chapter-item expanded "><a href="user/mengganti-password.html"><strong aria-hidden="true">1.8.</strong> Mengganti Password User</a></li><li class="chapter-item expanded "><a href="user/mengirimkan-email-aktivasi.html"><strong aria-hidden="true">1.9.</strong> Mengirimkan Email Aktivasi</a></li><li class="chapter-item expanded "><a href="user/menonaktifkan.html"><strong aria-hidden="true">1.10.</strong> Menonaktifkan User</a></li><li class="chapter-item expanded "><a href="user/menghapus.html"><strong aria-hidden="true">1.11.</strong> Menghapus User</a></li></ol></li><li class="chapter-item expanded "><a href="role.html"><strong aria-hidden="true">2.</strong> Role</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="role/penjelasan.html"><strong aria-hidden="true">2.1.</strong> Penjelasan Role</a></li><li class="chapter-item expanded "><a href="role/membuat.html"><strong aria-hidden="true">2.2.</strong> Membuat Role</a></li><li class="chapter-item expanded "><a href="role/memodifikasi.html"><strong aria-hidden="true">2.3.</strong> Memodifikasi Role</a></li><li class="chapter-item expanded "><a href="role/menghapus.html"><strong aria-hidden="true">2.4.</strong> Menghapus Role</a></li><li class="chapter-item expanded "><a href="role/menambah-group.html"><strong aria-hidden="true">2.5.</strong> Menambah Group Role</a></li><li class="chapter-item expanded "><a href="role/menghapus-group.html"><strong aria-hidden="true">2.6.</strong> Menghapus Group Role</a></li></ol></li><li class="chapter-item expanded "><a href="cancel-reason.html"><strong aria-hidden="true">3.</strong> Cancel Reason</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="cancel-reason/penjelasan.html"><strong aria-hidden="true">3.1.</strong> Penjelasan Cancel Reason</a></li><li class="chapter-item expanded "><a href="cancel-reason/membuat.html"><strong aria-hidden="true">3.2.</strong> Membuat Cancel Reason</a></li><li class="chapter-item expanded "><a href="cancel-reason/memodifikasi.html"><strong aria-hidden="true">3.3.</strong> Memodifikasi Cancel Reason</a></li><li class="chapter-item expanded "><a href="cancel-reason/menonaktifkan.html"><strong aria-hidden="true">3.4.</strong> Menonaktifkan Cancel Reason</a></li><li class="chapter-item expanded "><a href="cancel-reason/menghapus.html"><strong aria-hidden="true">3.5.</strong> Menghapus Cancel Reason</a></li></ol></li><li class="chapter-item expanded "><a href="cancel-reason-configurator.html"><strong aria-hidden="true">4.</strong> Cancel Reason Configurator</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="cancel-reason-configurator/penjelasan.html"><strong aria-hidden="true">4.1.</strong> Penjelasan Cancel Reason Configurator</a></li><li class="chapter-item expanded "><a href="cancel-reason-configurator/memodifikasi.html"><strong aria-hidden="true">4.2.</strong> Memodifikasi Cancel Reason Configurator</a></li></ol></li><li class="chapter-item expanded "><a href="audit-rules.html"><strong aria-hidden="true">5.</strong> Audit Rules</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="audit-rules/penjelasan.html"><strong aria-hidden="true">5.1.</strong> Penjelasan Audit Rules</a></li><li class="chapter-item expanded "><a href="audit-rules/membuat.html"><strong aria-hidden="true">5.2.</strong> Membuat Audit Rules</a></li><li class="chapter-item expanded "><a href="audit-rules/memodifikasi.html"><strong aria-hidden="true">5.3.</strong> Memodifikasi Audit Rules</a></li><li class="chapter-item expanded "><a href="audit-rules/menghapus.html"><strong aria-hidden="true">5.4.</strong> Menghapus Audit Rules</a></li><li class="chapter-item expanded "><a href="audit-rules/menerapkan.html"><strong aria-hidden="true">5.5.</strong> Menerapkan Audit Rules</a></li><li class="chapter-item expanded "><a href="audit-rules/mematikan.html"><strong aria-hidden="true">5.6.</strong> Mematikan Audit Rules</a></li></ol></li><li class="chapter-item expanded "><a href="sequence.html"><strong aria-hidden="true">6.</strong> Sequence</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="sequence/penjelasan.html"><strong aria-hidden="true">6.1.</strong> Penjelasan Sequence</a></li><li class="chapter-item expanded "><a href="sequence/membuat.html"><strong aria-hidden="true">6.2.</strong> Membuat Sequence</a></li><li class="chapter-item expanded "><a href="sequence/memodifikasi.html"><strong aria-hidden="true">6.3.</strong> Memodifikasi Sequence</a></li><li class="chapter-item expanded "><a href="sequence/menghapus.html"><strong aria-hidden="true">6.4.</strong> Menghapus Sequence</a></li><li class="chapter-item expanded "><a href="sequence/menonaktifkan.html"><strong aria-hidden="true">6.5.</strong> Menonaktifkan Sequence</a></li><li class="chapter-item expanded "><a href="sequence/membuat-cron.html"><strong aria-hidden="true">6.6.</strong> Membuat Cron Untuk Mereset Sequence</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Odoo - Administration</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#user" id="user">User</a></h1>
+<p><strong>User</strong> adalah fitur yang digunakan untuk mengatur daftar user yang akan menggunakan aplikasi ini.</p>
+<ul>
+<li><a href="./user/penjelasan.html">Penjelasan User</a></li>
+<li><a href="./user/membuat-non-portal.html">Membuat User Non-Portal</a></li>
+<li><a href="./user/membuat-portal.html">Membuat User Portal</a></li>
+<li><a href="./user/memodifikasi.html">Memodifikasi User</a></li>
+<li><a href="./user/menambah-user-role.html">Menambah User Role</a></li>
+<li><a href="./user/memodifikasi-user-role.html">Memodifikasi User Role</a></li>
+<li><a href="./user/menghapus-user-role.html">Menghapus User Role</a></li>
+<li><a href="./user/mengganti-password.html">Mengganti Password User</a></li>
+<li><a href="./user/mengirimkan-email-aktivasi.html">Mengirimkan Email Aktivasi</a></li>
+<li><a href="./user/menonaktifkan.html">Menonaktifkan User</a></li>
+<li><a href="./user/menghapus.html">Menghapus User</a></li>
+</ul>
+<h1><a class="header" href="#penjelasan-user" id="penjelasan-user">Penjelasan User</a></h1>
+<p>Informasi pada Menu User dibagi menjadi beberapa area, diantaranya:</p>
+<ul>
+<li><a href="user/penjelasan.html#bagian-header">Header</a></li>
+<li><a href="user/penjelasan.html#tab-role">Tab Role</a></li>
+<li><a href="user/penjelasan.html#tab-access-rights">Tab Access Rights</a></li>
+<li><a href="user/penjelasan.html#tab-oauth">Tab Oauth</a></li>
+<li><a href="user/penjelasan.html#tab-preference">Tab Preference</a></li>
+</ul>
+<h3><a class="header" href="#a-namebagian-headerheadera" id="a-namebagian-headerheadera"><a name="bagian-header">HEADER</a></a></h3>
+<p><img src="user/../img/user/header.png" alt="" /></p>
+<h4><a class="header" href="#a-namefield-namenamea" id="a-namefield-namenamea"><a name="field-name">Name</a></a></h4>
+<p>Nama User</p>
+<h4><a class="header" href="#a-namefield-emailemail-addressa" id="a-namefield-emailemail-addressa"><a name="field-email">Email Address</a></a></h4>
+<p>Alamat Email User</p>
+<h4><a class="header" href="#a-namefield-activeactivea" id="a-namefield-activeactivea"><a name="field-active">Active</a></a></h4>
+<p>Penanda status User aktif</p>
+<h3><a class="header" href="#a-nametab-roletab-rolea" id="a-nametab-roletab-rolea"><a name="tab-role">TAB ROLE</a></a></h3>
+<p><img src="user/../img/user/tab-role.png" alt="" /></p>
+<h4><a class="header" href="#a-namefield-rolerolea" id="a-namefield-rolerolea"><a name="field-role">Role</a></a></h4>
+<p>Nama Role</p>
+<h4><a class="header" href="#a-namefield-fromfroma" id="a-namefield-fromfroma"><a name="field-from">From</a></a></h4>
+<p>Tanggal awal Role</p>
+<h4><a class="header" href="#a-namefield-totoa" id="a-namefield-totoa"><a name="field-to">To</a></a></h4>
+<p>Tanggal akhir Role</p>
+<h4><a class="header" href="#a-namefield-enabledenableda" id="a-namefield-enabledenableda"><a name="field-enabled">Enabled</a></a></h4>
+<p>Status aktif Role</p>
+<h3><a class="header" href="#a-nametab-access-rightstab-access-rightsa" id="a-nametab-access-rightstab-access-rightsa"><a name="tab-access-rights">TAB ACCESS RIGHTS</a></a></h3>
+<p><img src="user/../img/user/tab-access-rights.png" alt="" />
+<img src="user/../img/user/tab-access-rights-2.png" alt="" />
+<img src="user/../img/user/tab-access-rights-3.png" alt="" /></p>
+<h4><a class="header" href="#a-namefield-applicationapplicationa" id="a-namefield-applicationapplicationa"><a name="field-application">Application</a></a></h4>
+<p>Daftar aplikasi yang dapat diakses dan digunakan oleh user</p>
+<h4><a class="header" href="#a-namefield-user-rolesuser-rolesa" id="a-namefield-user-rolesuser-rolesa"><a name="field-user-roles">User Roles</a></a></h4>
+<p>Daftar Role User</p>
+<h4><a class="header" href="#a-namefield-technical-settingstechnical-settingsa" id="a-namefield-technical-settingstechnical-settingsa"><a name="field-technical-settings">Technical Settings</a></a></h4>
+<p>Daftar pengaturan teknis yang dapat diakses dan digunakan oleh User</p>
+<h4><a class="header" href="#a-namefield-accounting-financeaccounting--financea" id="a-namefield-accounting-financeaccounting--financea"><a name="field-accounting-finance">Accounting &amp; Finance</a></a></h4>
+<p>Daftar pengaturan accounting &amp; finance yang dapat diakses dan digunakan oleh User</p>
+<h4><a class="header" href="#a-namefield-usabilityusabilitya" id="a-namefield-usabilityusabilitya"><a name="field-usability">Usability</a></a></h4>
+<p>Pengaturan penggunaan fitur yang dapat diakses dan digunakan oleh User</p>
+<h4><a class="header" href="#a-namefield-otherothera" id="a-namefield-otherothera"><a name="field-Other">Other</a></a></h4>
+<p>Pengaturan fitur lainnya yang dapat diakses dan digunakan oleh User</p>
+<h3><a class="header" href="#a-nametab-oauthtab-oautha" id="a-nametab-oauthtab-oautha"><a name="tab-oauth">TAB OAUTH</a></a></h3>
+<p><img src="user/../img/user/tab-oauth.png" alt="" /></p>
+<h4><a class="header" href="#a-namefield-oauth-provideroauth-providera" id="a-namefield-oauth-provideroauth-providera"><a name="field-oauth-provider">OAuth Provider</a></a></h4>
+<p>Pengaturan penggunaan penyedia autentikasi OAuth</p>
+<h4><a class="header" href="#a-namefield-oauth-user-idoauth-user-ida" id="a-namefield-oauth-user-idoauth-user-ida"><a name="field-oauth-user-id">OAuth User ID</a></a></h4>
+<p>Pengaturan informasi identitas User OAuth</p>
+<h4><a class="header" href="#a-namefield-oauth-access-tokenoauth-access-tokena" id="a-namefield-oauth-access-tokenoauth-access-tokena"><a name="field-oauth-access-token">OAuth Access Token</a></a></h4>
+<p>Pengaturan informasi token akses OAuth</p>
+<h3><a class="header" href="#a-nametab-preferencetab-preferencea" id="a-nametab-preferencetab-preferencea"><a name="tab-preference">TAB PREFERENCE</a></a></h3>
+<p><img src="user/../img/user/tab-preference.png" alt="" />
+<img src="user/../img/user/tab-preference2.png" alt="" />
+<img src="user/../img/user/tab-preference3.png" alt="" /></p>
+<h4><a class="header" href="#a-namefield-localizationlocalizationa" id="a-namefield-localizationlocalizationa"><a name="field-localization">Localization</a></a></h4>
+<p>Pengaturan informasi bahasa dan zona waktu</p>
+<h4><a class="header" href="#a-namefield-menu-customizationmenus-customizationa" id="a-namefield-menu-customizationmenus-customizationa"><a name="field-menu-customization">Menus Customization</a></a></h4>
+<p>Pengaturan kustomisasi menu yang dapat diakses dan digunakan oleh user</p>
+<h4><a class="header" href="#a-namefield-messaging-socialmessaging-and-sociala" id="a-namefield-messaging-socialmessaging-and-sociala"><a name="field-messaging-social">Messaging and Social</a></a></h4>
+<p>Pengaturan notifikasi pesan yang diterima oleh user, tampilan email dan signature</p>
+<h4><a class="header" href="#a-namefield-mapsmapsa" id="a-namefield-mapsmapsa"><a name="field-maps">Maps</a></a></h4>
+<p>Pengaturan lokasi peta dan rute alamat</p>
+<h4><a class="header" href="#a-namefield-mfa-settingsmfa-settingsa" id="a-namefield-mfa-settingsmfa-settingsa"><a name="field-mfa-settings">MFA Settings</a></a></h4>
+<p>Pengaturan autentikasi Multi-Factor Authentication aplikasi/ perangkat</p>
+<h1><a class="header" href="#membuat-user-non-portal" id="membuat-user-non-portal">Membuat User Non-Portal</a></h1>
+<h2><a class="header" href="#a-input" id="a-input">A. INPUT</a></h2>
+<p><em>(Tidak ada instruksi khusus)</em></p>
+<h2><a class="header" href="#b-langkah-kerja" id="b-langkah-kerja">B. LANGKAH KERJA</a></h2>
+<ol>
+<li>Buka menu <strong>Setting -&gt; User -&gt; User</strong>. Abaikan jika sudah berada pada menu yang dimaksud.</li>
+<li>Klik tombol <strong>Create</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="user/../img/user/tombol-create.png" alt="" /></p>
+<ol start="3">
+<li>Isi <strong><a href="user/./penjelasan.html#field-name">Name</a></strong>. Wajib diisi.</li>
+<li>Isi <strong><a href="user/./penjelasan.html#field-email">Email Address</a></strong>. Wajib diisi.</li>
+<li>Aktifkan/ Deaktifkan <strong><a href="user/./penjelasan.html#field-active">Active</a></strong>. Tidak wajib diisi.</li>
+<li>Beralih ke tab <strong><a href="user/./penjelasan.html#tab-role">Role</a></strong>.</li>
+<li><a name="l9"><a href="user/./menambah-user-role.html">Tambah</a>/<a href="user/./memodifikasi-user-role.html">Modifikasi</a>/<a href="user/./menghapus-user-role.html">Hapus</a></a>  <strong>Role</strong>. Ulangi langkah ini sampai <strong>Role</strong> sesuai dengan keinginan.</li>
+<li>Beralih ke tab <strong><a href="user/./penjelasan.html#tab-preference">Preferences</a></strong>.</li>
+<li>Pilih <strong><a href="user/./penjelasan.html#field-localization">Language</a></strong>. Tidak wajib diisi.</li>
+<li>Pilih <strong><a href="user/./penjelasan.html#field-localization">Timezone</a></strong>. Tidak wajib diisi.</li>
+<li>Pilih <strong><a href="user/./penjelasan.html#field-menu-customization">Home Action</a></strong>. Tidak wajib diisi.</li>
+<li>Pilih <strong><a href="user/./penjelasan.html#field-messaging-social">Receive Inbox Notifications by Email</a></strong>. Tidak wajib diisi.</li>
+<li>Isi <strong><a href="user/./penjelasan.html#field-messaging-social">Messaging Alias</a></strong>. Tidak wajib diisi.</li>
+<li>Pilih <strong><a href="user/./penjelasan.html#field-messaging-social">Alias Accepts Emails From</a></strong>. Tidak wajib diisi.</li>
+<li>Aktifkan/ Deaktifkan <strong><a href="user/./penjelasan.html#field-messaging-social">Display Groups Suggestions</a></strong>. Tidak wajib diisi.</li>
+<li>Isi <strong><a href="user/./penjelasan.html#field-messaging-social">Signature</a></strong>. Tidak wajib diisi.</li>
+<li>Pilih <strong><a href="user/./penjelasan.html#field-maps">Map Website</a></strong>. Tidak wajib diisi.</li>
+<li>Pilih <strong><a href="user/./penjelasan.html#field-maps">Route Map Website</a></strong>. Tidak wajib diisi.</li>
+<li>Isi <strong><a href="user/./penjelasan.html#field-maps">Start Address for Route Map</a></strong>. Tidak wajib diisi.</li>
+<li>Aktifkan/ Deaktifkan <strong><a href="user/./penjelasan.html#field-mfa-settings">MFA Enabled</a></strong>. Tidak wajib diisi.</li>
+<li>Isi <strong><a href="user/./penjelasan.html#field-mfa-settings">Authentication Apps/Devices</a></strong>. Tidak wajib diisi.</li>
+<li>Klik tombol <strong>Save</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="user/../img/user/tombol-save.png" alt="" /></p>
+<h2><a class="header" href="#c-output" id="c-output">C. OUTPUT</a></h2>
+<p><em>(Tidak ada instruksi khusus)</em></p>
+<h1><a class="header" href="#membuat-user-portal" id="membuat-user-portal">Membuat User Portal</a></h1>
+<h2><a class="header" href="#a-input-1" id="a-input-1">A. INPUT</a></h2>
+<p><em>(Tidak ada instruksi khusus)</em></p>
+<h2><a class="header" href="#b-langkah-kerja-1" id="b-langkah-kerja-1">B. LANGKAH KERJA</a></h2>
+<ol>
+<li>Buka menu <strong>Partner -&gt; Partner -&gt; Company Partner</strong>. Abaikan jika sudah berada pada menu yang dimaksud.</li>
+<li>Buka data <em>partner</em> yang akan diberikan akses user portal.</li>
+<li>Klik tombol <strong>More</strong> pada bagian atas-tengah form.</li>
+</ol>
+<p><img src="user/../img/user/tombol-more-user-portal.png" alt="" /></p>
+<ol start="4">
+<li>Klik tombol <strong>Portal Access Management</strong> pada drop-down yang muncul pada tombol <strong>More</strong></li>
+</ol>
+<p><img src="user/../img/user/tombol-portal-access-management.png" alt="" /></p>
+<ol start="5">
+<li>Centang checkbox <strong>In Portal</strong> pada <strong>Contact</strong> yang akan diberikan akses user portal.</li>
+</ol>
+<p><img src="user/../img/user/tombol-checklist-portal-access-management.png" alt="" /></p>
+<ol start="6">
+<li>Klik tombol <strong>Apply</strong> pada bagian bawah-kiri form.</li>
+</ol>
+<p><img src="user/../img/user/tombol-apply-portal-access-management.png" alt="" /></p>
+<h2><a class="header" href="#c-output-1" id="c-output-1">C. OUTPUT</a></h2>
+<p><em>(Tidak ada instruksi khusus)</em></p>
+<h1><a class="header" href="#memodifikasi-user" id="memodifikasi-user">Memodifikasi User</a></h1>
+<h2><a class="header" href="#a-input-2" id="a-input-2">A. INPUT</a></h2>
+<p><em>(Tidak ada instruksi khusus)</em></p>
+<h2><a class="header" href="#b-langkah-kerja-2" id="b-langkah-kerja-2">B. LANGKAH KERJA</a></h2>
+<ol>
+<li>Buka menu <strong>Setting -&gt; User -&gt; User</strong>. Abaikan jika sudah berada pada menu yang dimaksud.</li>
+<li>Buka data <em>User</em> yang akan dimodifikasi. Abaikan jika data sudah dibuka.</li>
+<li>Klik tombol <strong>Edit</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="user/../img/user/tombol-edit.png" alt="" /></p>
+<ol start="4">
+<li>Isi dan sesuaikan <strong><a href="user/./penjelasan.html#field-name">Name</a></strong> jika dibutuhkan. Wajib diisi.</li>
+<li>Isi dan sesuaikan <strong><a href="user/./penjelasan.html#field-email">Email Address</a></strong> jika dibutuhkan. Wajib diisi.</li>
+<li>Aktifkan/ Deaktifkan <strong><a href="user/./penjelasan.html#field-active">Active</a></strong> jika dibutuhkan. Tidak wajib diisi.</li>
+<li>Beralih ke tab <strong><a href="user/./penjelasan.html#tab-role">Role</a></strong></li>
+<li><a name="l9"><a href="user/./menambah-user-role.html">Tambah</a>/<a href="user/./memodifikasi-user-role.html">Modifikasi</a>/<a href="user/./menghapus-user-role.html">Hapus</a></a>  <strong>Role</strong>. Ulangi langkah ini sampai <strong>Role</strong> sesuai dengan keinginan.</li>
+<li>Beralih ke tab <strong><a href="user/./penjelasan.html#tab-preference">Preferences</a></strong></li>
+<li>Pilih dan sesuaikan <strong><a href="user/./penjelasan.html#field-localization">Language</a></strong> jika dibutuhkan. Tidak wajib diisi.</li>
+<li>Pilih dan sesuaikan <strong><a href="user/./penjelasan.html#field-localization">Timezone</a></strong> jika dibutuhkan. Tidak wajib diisi.</li>
+<li>Pilih dan sesuaikan <strong><a href="user/./penjelasan.html#field-menu-customization">Home Action</a></strong> jika dibutuhkan. Tidak wajib diisi.</li>
+<li>Pilih dan sesuaikan <strong><a href="user/./penjelasan.html#field-messaging-social">Receive Inbox Notifications by Email</a></strong> jika dibutuhkan. Tidak wajib diisi.</li>
+<li>Isi dan sesuaikan <strong><a href="user/./penjelasan.html#field-messaging-social">Messaging Alias</a></strong> jika dibutuhkan. Tidak wajib diisi.</li>
+<li>Pilih dan sesuaikan <strong><a href="user/./penjelasan.html#field-messaging-social">Alias Accepts Emails From</a></strong> jika dibutuhkan. Tidak wajib diisi.</li>
+<li>Aktifkan/ Deaktifkan <strong><a href="user/./penjelasan.html#field-messaging-social">Display Groups Suggestions</a></strong> jika dibutuhkan. Tidak wajib diisi.</li>
+<li>Isi dan sesuaikan <strong><a href="user/./penjelasan.html#field-messaging-social">Signature</a></strong> jika dibutuhkan. Tidak wajib diisi.</li>
+<li>Pilih dan sesuaikan <strong><a href="user/./penjelasan.html#field-maps">Map Website</a></strong> jika dibutuhkan. Tidak wajib diisi.</li>
+<li>Pilih dan sesuaikan <strong><a href="user/./penjelasan.html#field-maps">Route Map Website</a></strong> jika dibutuhkan. Tidak wajib diisi.</li>
+<li>Isi dan sesuaikan <strong><a href="user/./penjelasan.html#field-maps">Start Address for Route Map</a></strong> jika dibutuhkan. Tidak wajib diisi.</li>
+<li>Aktifkan/ Deaktifkan <strong><a href="user/./penjelasan.html#field-mfa-settings">MFA Enabled</a></strong> jika dibutuhkan. Tidak wajib diisi.</li>
+<li>Isi dan sesuaikan <strong><a href="user/./penjelasan.html#field-mfa-settings">Authentication Apps/Devices</a></strong> jika dibutuhkan. Tidak wajib diisi.</li>
+<li>Klik tombol <strong>Save</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="user/../img/user/tombol-save-modifikasi.png" alt="" /></p>
+<h2><a class="header" href="#c-output-2" id="c-output-2">C. OUTPUT</a></h2>
+<ul>
+<li>Data User akan berubah sesuai dengan perubahan yang dilakukan.</li>
+</ul>
+<h1><a class="header" href="#menambah-user-role" id="menambah-user-role">Menambah User Role</a></h1>
+<p><em>(Instruksi kerja ini merupakan sub instruksi dari (1) <a href="user/./membuat-non-portal.html">Membuat User</a>, atau (2) <a href="user/./memodifikasi.html">Memodifikasi User</a>. Instruksi kerja ini tidak bisa berdiri sendiri)</em></p>
+<h2><a class="header" href="#a-input-3" id="a-input-3">A. INPUT</a></h2>
+<p><em>(Tidak ada instruksi khusus)</em></p>
+<h2><a class="header" href="#b-langkah-kerja-3" id="b-langkah-kerja-3">B. LANGKAH KERJA</a></h2>
+<ol>
+<li>Klik label <strong>Add an Item</strong> pada tabel <em>Roles</em>.</li>
+</ol>
+<p><img src="user/../img/user/label-add-item-role.png" alt="" /></p>
+<ol start="2">
+<li>Isi <strong><a href="user/./penjelasan.html#field-role">Role</a></strong>. Wajib diisi.</li>
+<li>Isi <strong><a href="user/./penjelasan.html#field-from">From</a></strong>. Tidak wajib diisi.</li>
+<li>Isi <strong><a href="user/./penjelasan.html#field-to">To</a></strong>. Tidak wajib diisi.</li>
+<li>Aktifkan/ Deaktifkan <strong><a href="user/./penjelasan.html#field-enabled">Enabled</a></strong>. Tidak wajib diisi.</li>
+<li>Ulangi langkah ke-1 untuk menambahkan <strong>Role</strong> baru.</li>
+<li>Lanjutkan <a href="user/./membuat-non-portal.html#l8">langkah ke-8 instruksi Membuat User</a> atau <a href="user/./memodifikasi.html#l9">langkah ke-9 instruksi Memodifikasi User</a>.</li>
+</ol>
+<h2><a class="header" href="#c-output-3" id="c-output-3">C. OUTPUT</a></h2>
+<p><em>(Tidak ada instruksi khusus)</em></p>
+<h1><a class="header" href="#memodifikasi-user-role" id="memodifikasi-user-role">Memodifikasi User Role</a></h1>
+<p><em>(Instruksi kerja ini merupakan sub instruksi dari (1) <a href="user/./membuat-non-portal.html">Membuat User</a>, atau (2) <a href="user/./memodifikasi.html">Memodifikasi User</a>. Instruksi kerja ini tidak bisa berdiri sendiri)</em></p>
+<h2><a class="header" href="#a-input-4" id="a-input-4">A. INPUT</a></h2>
+<p><em>(Tidak ada instruksi khusus)</em></p>
+<h2><a class="header" href="#b-langkah-kerja-4" id="b-langkah-kerja-4">B. LANGKAH KERJA</a></h2>
+<ol>
+<li>Buka data <strong>Role</strong> yang akan dimodifikasi.</li>
+<li>Isi dan sesuaikan <strong><a href="user/./penjelasan.html#field-role">Role</a></strong> jika dibutuhkan. Wajib diisi.</li>
+<li>Isi dan sesuaikan <strong><a href="user/./penjelasan.html#field-from">From</a></strong> jika dibutuhkan. Tidak wajib diisi.</li>
+<li>Isi dan sesuaikan <strong><a href="user/./penjelasan.html#field-to">To</a></strong> jika dibutuhkan. Tidak wajib diisi.</li>
+<li>Aktifkan/ Deaktifkan <strong><a href="user/./penjelasan.html#field-enabled">Enabled</a></strong> jika dibutuhkan. Tidak wajib diisi.</li>
+<li>Lanjutkan <a href="user/./membuat-non-portal.html#l8">langkah ke-8 instruksi Membuat User</a> atau <a href="user/./memodifikasi.html#l9">langkah ke-9 instruksi Memodifikasi User</a>.</li>
+</ol>
+<h2><a class="header" href="#c-output-4" id="c-output-4">C. OUTPUT</a></h2>
+<p><em>(Tidak ada instruksi khusus)</em></p>
+<h1><a class="header" href="#menghapus-user-role" id="menghapus-user-role">Menghapus User Role</a></h1>
+<p><em>(Instruksi kerja ini merupakan sub instruksi dari (1) <a href="user/./membuat-non-portal.html">Membuat User</a>, atau (2) <a href="user/./memodifikasi.html">Memodifikasi User</a>. Instruksi kerja ini tidak bisa berdiri sendiri)</em></p>
+<h2><a class="header" href="#a-input-5" id="a-input-5">A. INPUT</a></h2>
+<p><em>(Tidak ada instruksi khusus)</em></p>
+<h2><a class="header" href="#b-langkah-kerja-5" id="b-langkah-kerja-5">B. LANGKAH KERJA</a></h2>
+<ol>
+<li>Klik icon tempat sampah pada bagian kanan <strong>Role</strong> yang akan dihapus.</li>
+</ol>
+<p><img src="user/../img/user/icon-hapus-user-role.png" alt="" /></p>
+<ol start="2">
+<li>Ulangi langkah ke-1 untuk setiap <strong>Role</strong> yang akan dihapus.</li>
+<li>Lanjutkan <a href="user/./membuat-non-portal.html#l8">langkah ke-8 instruksi Membuat User</a> atau <a href="user/./memodifikasi.html#l9">langkah ke-9 instruksi Memodifikasi User</a>.</li>
+</ol>
+<h2><a class="header" href="#c-output-5" id="c-output-5">C. OUTPUT</a></h2>
+<p><em>(Tidak ada instruksi khusus)</em></p>
+<h1><a class="header" href="#mengganti-password-user" id="mengganti-password-user">Mengganti Password User</a></h1>
+<h2><a class="header" href="#a-input-6" id="a-input-6">A. INPUT</a></h2>
+<p><em>(Tidak ada instruksi khusus)</em></p>
+<h2><a class="header" href="#b-langkah-kerja-6" id="b-langkah-kerja-6">B. LANGKAH KERJA</a></h2>
+<ol>
+<li>Buka menu <strong>Setting -&gt; User -&gt; User</strong>. Abaikan jika sudah berada pada menu yang dimaksud.</li>
+<li>Buka data <em>User</em> yang akan diganti password. Abaikan jika data sudah dibuka.</li>
+<li>Klik tombol <strong>More</strong> pada bagian atas-tengah form.</li>
+</ol>
+<p><img src="user/../img/user/tombol-more.png" alt="" /></p>
+<ol start="4">
+<li>Klik tombol <strong>Change Password</strong> pada <em>dropdown</em> yang muncul ketika tombol <strong>More</strong> diklik.</li>
+</ol>
+<p><img src="user/../img/user/tombol-change-password.png" alt="" /></p>
+<ol start="5">
+<li>Isi dan sesuaikan kolom <em>New Password</em> pada <em>pop-up</em> menu <strong>Change Password</strong> yang muncul.</li>
+</ol>
+<p><img src="user/../img/user/kolom-new-password.png" alt="" /></p>
+<ol start="5">
+<li>Klik tombol <strong>Change Password</strong> pada bagian kiri-bawah <em>pop-up</em> menu <strong>Change Password</strong>.</li>
+</ol>
+<p><img src="user/../img/user/tombol-konfirmasi-change-password.png" alt="" /></p>
+<h2><a class="header" href="#c-output-6" id="c-output-6">C. OUTPUT</a></h2>
+<ul>
+<li>Data User akan tergantikan dengan Password baru.</li>
+</ul>
+<h1><a class="header" href="#mengirimkan-email-aktivasi" id="mengirimkan-email-aktivasi">Mengirimkan Email Aktivasi</a></h1>
+<h2><a class="header" href="#a-input-7" id="a-input-7">A. INPUT</a></h2>
+<ul>
+<li>Data <em>User</em> yang akan dikirimkan email aktivasi harus memiliki status <strong>Never Connected</strong></li>
+</ul>
+<p><img src="user/../img/user/status-input-user-never-connected.png" alt="" /></p>
+<h2><a class="header" href="#b-langkah-kerja-7" id="b-langkah-kerja-7">B. LANGKAH KERJA</a></h2>
+<ol>
+<li>Buka menu <strong>Setting -&gt; User -&gt; User</strong>. Abaikan jika sudah berada pada menu yang dimaksud.</li>
+<li>Buka data <em>User</em> yang akan dikirimkan email aktivasi. Abaikan jika data sudah dibuka.</li>
+<li>Klik tombol <strong>Send an Invitation Email</strong> pada bagian atas-kanan form.</li>
+</ol>
+<p><img src="user/../img/user/tombol-kirim-invitation-user.png" alt="" /></p>
+<ol start="4">
+<li>Klik tombol <em>Ok</em> pada <em>pop-up</em> menu <strong>Confirmation</strong> yang muncul.</li>
+</ol>
+<p><img src="user/../img/user/tombol-konfirmasi-kirim-email-invitation.png" alt="" /></p>
+<h2><a class="header" href="#c-output-7" id="c-output-7">C. OUTPUT</a></h2>
+<ul>
+<li>User akan mendapatkan email aktivasi.</li>
+</ul>
+<h1><a class="header" href="#menonaktifkan-user" id="menonaktifkan-user">Menonaktifkan User</a></h1>
+<h2><a class="header" href="#a-input-8" id="a-input-8">A. INPUT</a></h2>
+<ul>
+<li>Data <em>User</em> yang akan dinonaktifkan harus memiliki status <strong>Active</strong></li>
+</ul>
+<p><img src="user/../img/user/status-input-user-active.png" alt="" /></p>
+<h2><a class="header" href="#b-langkah-kerja-8" id="b-langkah-kerja-8">B. LANGKAH KERJA</a></h2>
+<ol>
+<li>Buka menu <strong>Setting -&gt; User -&gt; User</strong>. Abaikan jika sudah berada pada menu yang dimaksud.</li>
+<li>Buka data <em>User</em> yang akan dinonaktifkan. Abaikan jika data sudah dibuka.</li>
+<li>Klik tombol <strong>Edit</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="user/../img/user/tombol-edit.png" alt="" /></p>
+<ol start="4">
+<li>
+<p>Deaktifkan <strong><a href="user/./penjelasan.html#field-active">Active</a></strong>.</p>
+</li>
+<li>
+<p>Klik tombol <strong>Save</strong> pada bagian atas-kiri form.</p>
+</li>
+</ol>
+<p><img src="user/../img/user/tombol-save-modifikasi.png" alt="" /></p>
+<h2><a class="header" href="#c-output-8" id="c-output-8">C. OUTPUT</a></h2>
+<ul>
+<li>Data User akan non aktif.</li>
+</ul>
+<h1><a class="header" href="#menghapus-user" id="menghapus-user">Menghapus User</a></h1>
+<h2><a class="header" href="#a-input-9" id="a-input-9">A. INPUT</a></h2>
+<p><em>(Tidak ada instruksi khusus)</em></p>
+<h2><a class="header" href="#b-langkah-kerja-9" id="b-langkah-kerja-9">B. LANGKAH KERJA</a></h2>
+<ol>
+<li>Buka menu <strong>Setting -&gt; User -&gt; User</strong>. Abaikan jika sudah berada pada menu yang dimaksud.</li>
+<li>Buka data <em>User</em> yang akan dihapus. Abaikan jika data sudah dibuka.</li>
+<li>Klik tombol <strong>More</strong> pada bagian atas-tengah form.</li>
+</ol>
+<p><img src="user/../img/user/tombol-more.png" alt="" /></p>
+<ol start="4">
+<li>Klik tombol <strong>Delete</strong> pada <em>dropdown</em> yang muncul ketika tombol <strong>More</strong> diklik.</li>
+</ol>
+<p><img src="user/../img/user/tombol-more-delete.png" alt="" /></p>
+<ol start="5">
+<li>Klik tombol <strong>Ok</strong> pada <em>pop-up</em> konfirmasi penghapusan yang muncul.</li>
+</ol>
+<p><img src="user/../img/user/pop-up-konfirmasi-delete.png" alt="" /></p>
+<h2><a class="header" href="#c-output-9" id="c-output-9">C. OUTPUT</a></h2>
+<ul>
+<li>Data User akan terhapus.</li>
+</ul>
+<h1><a class="header" href="#role" id="role">Role</a></h1>
+<p><strong>Role</strong> adalah fitur yang digunakan untuk mengatur Role yang akan diberikan kepada User.</p>
+<ul>
+<li><a href="./role/penjelasan.html">Penjelasan Role</a></li>
+<li><a href="./role/membuat.html">Membuat Role</a></li>
+<li><a href="./role/memodifikasi.html">Memodifikasi Role</a></li>
+<li><a href="./role/menghapus.html">Menghapus Role</a></li>
+<li><a href="./role/menambah-group.html">Menambah Group Role</a></li>
+<li><a href="./role/menghapus-group.html">Menghapus Group Role</a></li>
+</ul>
+<h1><a class="header" href="#penjelasan-role" id="penjelasan-role">Penjelasan Role</a></h1>
+<p>Informasi pada Menu Role dibagi menjadi beberapa area, diantaranya:</p>
+<ul>
+<li><a href="role/penjelasan.html#bagian-header">Header</a></li>
+<li><a href="role/penjelasan.html#tab-groups">Tab Groups</a></li>
+<li><a href="role/penjelasan.html#tab-users">Tab Users</a></li>
+</ul>
+<h3><a class="header" href="#a-namebagian-headerheadera-1" id="a-namebagian-headerheadera-1"><a name="bagian-header">HEADER</a></a></h3>
+<p><img src="role/../img/role/header.png" alt="" /></p>
+<h4><a class="header" href="#a-namefield-namenamea-1" id="a-namefield-namenamea-1"><a name="field-name">Name</a></a></h4>
+<p>Nama Role.</p>
+<h4><a class="header" href="#a-namefield-groupassociated-groupa" id="a-namefield-groupassociated-groupa"><a name="field-group">Associated Group</a></a></h4>
+<p>Group yang terhubung.</p>
+<h3><a class="header" href="#a-nametab-groupstab-groupsa" id="a-nametab-groupstab-groupsa"><a name="tab-groups">TAB GROUPS</a></a></h3>
+<p><img src="role/../img/role/tab-groups.png" alt="" /></p>
+<h4><a class="header" href="#a-namefield-group-namegroup-namea" id="a-namefield-group-namegroup-namea"><a name="field-group-name">Group Name</a></a></h4>
+<p>Nama Group.</p>
+<h3><a class="header" href="#a-nametab-userstab-usersa" id="a-nametab-userstab-usersa"><a name="tab-users">TAB USERS</a></a></h3>
+<p><img src="role/../img/role/tab-users.png" alt="" /></p>
+<h4><a class="header" href="#a-namefield-userusera" id="a-namefield-userusera"><a name="field-user">User</a></a></h4>
+<p>Nama User.</p>
+<h4><a class="header" href="#a-namefield-fromfroma-1" id="a-namefield-fromfroma-1"><a name="field-from">From</a></a></h4>
+<p>Tanggal awal User.</p>
+<h4><a class="header" href="#a-namefield-totoa-1" id="a-namefield-totoa-1"><a name="field-to">To</a></a></h4>
+<p>Tanggal akhir User.</p>
+<h4><a class="header" href="#a-namefield-enabledenableda-1" id="a-namefield-enabledenableda-1"><a name="field-enabled">Enabled</a></a></h4>
+<p>Status aktif User.</p>
+<h1><a class="header" href="#membuat-role" id="membuat-role">Membuat Role</a></h1>
+<h2><a class="header" href="#a-input-10" id="a-input-10">A. INPUT</a></h2>
+<p><em>(Tidak ada instruksi khusus)</em></p>
+<h2><a class="header" href="#b-langkah-kerja-10" id="b-langkah-kerja-10">B. LANGKAH KERJA</a></h2>
+<ol>
+<li>Buka menu <strong>Setting -&gt; Users -&gt; Roles</strong>. Abaikan jika sudah berada pada menu yang dimaksud.</li>
+<li>Klik tombol <strong>Create</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="role/../img/role/tombol-create.png" alt="" /></p>
+<ol start="3">
+<li>Isi <strong><a href="role/./penjelasan.html#field-name">Name</a></strong>. Wajib diisi.</li>
+<li>Beralih ke tab <strong><a href="role/./penjelasan.html#tab-groups">Groups</a></strong>.</li>
+<li><a name="l9"><a href="role/./menambah-group.html">Tambah</a>/<a href="role/./menghapus-group.html">Hapus</a></a>  <strong>Group Role</strong>. Ulangi langkah ini sampai <strong>Group Role</strong> sesuai dengan keinginan.</li>
+<li>Klik tombol <strong>Save</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="role/../img/role/tombol-save.png" alt="" /></p>
+<h2><a class="header" href="#c-output-10" id="c-output-10">C. OUTPUT</a></h2>
+<p><em>(Tidak ada instruksi khusus)</em></p>
+<h1><a class="header" href="#memodifikasi-role" id="memodifikasi-role">Memodifikasi Role</a></h1>
+<h2><a class="header" href="#a-input-11" id="a-input-11">A. INPUT</a></h2>
+<p><em>(Tidak ada instruksi khusus)</em></p>
+<h2><a class="header" href="#b-langkah-kerja-11" id="b-langkah-kerja-11">B. LANGKAH KERJA</a></h2>
+<ol>
+<li>Buka menu <strong>Setting -&gt; User -&gt; Roles</strong>. Abaikan jika sudah berada pada menu yang dimaksud.</li>
+<li>Buka data <em>Role</em> yang akan dimodifikasi. Abaikan jika data sudah dibuka.</li>
+<li>Klik tombol <strong>Edit</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="role/../img/role/tombol-edit.png" alt="" /></p>
+<ol start="4">
+<li>Isi dan sesuaikan <strong><a href="role/./penjelasan.html#field-name">Name</a></strong> jika dibutuhkan. Wajib diisi.</li>
+<li>Beralih ke tab <strong><a href="role/./penjelasan.html#tab-groups">Groups</a></strong>.</li>
+<li><a name="l9"><a href="role/./menambah-group.html">Tambah</a>/<a href="role/./menghapus-group.html">Hapus</a></a>  <strong>Group Role</strong>. Ulangi langkah ini sampai <strong>Group Role</strong> sesuai dengan keinginan.</li>
+<li>Klik tombol <strong>Save</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="role/../img/role/tombol-save-modifikasi.png" alt="" /></p>
+<h2><a class="header" href="#c-output-11" id="c-output-11">C. OUTPUT</a></h2>
+<ul>
+<li>Data Role akan berubah sesuai dengan perubahan yang dilakukan.</li>
+</ul>
+<h1><a class="header" href="#menghapus-role" id="menghapus-role">Menghapus Role</a></h1>
+<h2><a class="header" href="#a-input-12" id="a-input-12">A. INPUT</a></h2>
+<p><em>(Tidak ada instruksi khusus)</em></p>
+<h2><a class="header" href="#b-langkah-kerja-12" id="b-langkah-kerja-12">B. LANGKAH KERJA</a></h2>
+<ol>
+<li>Buka menu <strong>Setting -&gt; Users -&gt; Roles</strong>. Abaikan jika sudah berada pada menu yang dimaksud.</li>
+<li>Buka data <em>Role</em> yang akan dihapus. Abaikan jika data sudah dibuka.</li>
+<li>Klik tombol <strong>More</strong> pada bagian atas-tengah form.</li>
+</ol>
+<p><img src="role/../img/role/tombol-more.png" alt="" /></p>
+<ol start="4">
+<li>Klik tombol <strong>Delete</strong> pada <em>dropdown</em> yang muncul ketika tombol <strong>More</strong> diklik.</li>
+</ol>
+<p><img src="role/../img/role/tombol-more-delete.png" alt="" /></p>
+<ol start="5">
+<li>Klik tombol <strong>Ok</strong> pada <em>pop-up</em> konfirmasi penghapusan yang muncul.</li>
+</ol>
+<p><img src="role/../img/role/pop-up-konfirmasi-delete.png" alt="" /></p>
+<h2><a class="header" href="#c-output-12" id="c-output-12">C. OUTPUT</a></h2>
+<ul>
+<li>Data Role akan terhapus.</li>
+</ul>
+<h1><a class="header" href="#menambah-group-role" id="menambah-group-role">Menambah Group Role</a></h1>
+<p><em>(Instruksi kerja ini merupakan sub instruksi dari (1) <a href="role/./membuat.html">Membuat Role</a>, atau (2) <a href="role/./memodifikasi.html">Memodifikasi Role</a>. Instruksi kerja ini tidak bisa berdiri sendiri)</em></p>
+<h2><a class="header" href="#a-input-13" id="a-input-13">A. INPUT</a></h2>
+<p><em>(Tidak ada instruksi khusus)</em></p>
+<h2><a class="header" href="#b-langkah-kerja-13" id="b-langkah-kerja-13">B. LANGKAH KERJA</a></h2>
+<ol>
+<li>Klik label <strong>Add an Item</strong> pada tabel <em>Groups</em>.</li>
+</ol>
+<p><img src="role/../img/role/label-add-item-group-role.png" alt="" /></p>
+<p>Pop-up <strong>Group Role</strong> akan muncul.</p>
+<p><img src="role/../img/role/pop-up-group-role-01.png" alt="" />
+<img src="role/../img/role/pop-up-group-role-02.png" alt="" /></p>
+<ol start="2">
+<li>Seleksi data Group Role.</li>
+<li>Klik tombol <strong>Select</strong> pada bagian bawah-kiri pop-up Group Role.</li>
+</ol>
+<p><img src="role/../img/role/tombol-select-group-role.png" alt="" /></p>
+<ol start="4">
+<li>Lanjutkan <a href="role/./membuat.html#l6">langkah ke-6 instruksi Membuat Role</a> atau <a href="role/./memodifikasi.html#l7">langkah ke-7 instruksi Memodifikasi Role</a>.</li>
+</ol>
+<h2><a class="header" href="#c-output-13" id="c-output-13">C. OUTPUT</a></h2>
+<p><em>(Tidak ada instruksi khusus)</em></p>
+<h1><a class="header" href="#menghapus-group-role" id="menghapus-group-role">Menghapus Group Role</a></h1>
+<p><em>(Instruksi kerja ini merupakan sub instruksi dari (1) <a href="role/./membuat.html">Membuat Role</a>, atau (2) <a href="role/./memodifikasi.html">Memodifikasi Role</a>. Instruksi kerja ini tidak bisa berdiri sendiri)</em></p>
+<h2><a class="header" href="#a-input-14" id="a-input-14">A. INPUT</a></h2>
+<p><em>(Tidak ada instruksi khusus)</em></p>
+<h2><a class="header" href="#b-langkah-kerja-14" id="b-langkah-kerja-14">B. LANGKAH KERJA</a></h2>
+<ol>
+<li>Klik icon tempat sampah pada bagian kanan <strong>Group Role</strong> yang akan dihapus.</li>
+</ol>
+<p><img src="role/../img/role/icon-hapus-group-role.png" alt="" /></p>
+<ol start="2">
+<li>Ulangi langkah ke-1 untuk setiap <strong>Group Role</strong> yang akan dihapus.</li>
+<li>Lanjutkan <a href="role/./membuat.html#l6">langkah ke-6 instruksi Membuat Role</a> atau <a href="role/./memodifikasi.html#l7">langkah ke-7 instruksi Memodifikasi Role</a>.</li>
+</ol>
+<h2><a class="header" href="#c-output-14" id="c-output-14">C. OUTPUT</a></h2>
+<p><em>(Tidak ada instruksi khusus)</em></p>
+<h1><a class="header" href="#cancel-reason" id="cancel-reason">Cancel Reason</a></h1>
+<p><strong>Cancel Reason</strong> adalah fitur yang digunakan untuk mengatur alasan pembatalan.</p>
+<ul>
+<li><a href="./cancel-reason/penjelasan.html">Penjelasan Cancel Reason</a></li>
+<li><a href="./cancel-reason/membuat.html">Membuat Cancel Reason</a></li>
+<li><a href="./cancel-reason/memodifikasi.html">Memodifikasi Cancel Reason</a></li>
+<li><a href="./cancel-reason/menghapus.html">Menghapus Cancel Reason</a></li>
+<li><a href="./cancel-reason/menonaktifkan.html">Menonaktifkan Cancel Reason</a></li>
+</ul>
+<h1><a class="header" href="#penjelasan-cancel-reason" id="penjelasan-cancel-reason">Penjelasan Cancel Reason</a></h1>
+<p>Informasi pada Menu Cancel Reason dibagi menjadi beberapa area, diantaranya:</p>
+<ul>
+<li><a href="cancel-reason/penjelasan.html#bagian-header">Header</a></li>
+<li><a href="cancel-reason/penjelasan.html#tab-notes">Tab Notes</a></li>
+</ul>
+<h3><a class="header" href="#a-namebagian-headerheadera-2" id="a-namebagian-headerheadera-2"><a name="bagian-header">HEADER</a></a></h3>
+<p><img src="cancel-reason/../img/cancel-reason/header.png" alt="" /></p>
+<h4><a class="header" href="#a-namefield-cancel-reasoncancel-reasona" id="a-namefield-cancel-reasoncancel-reasona"><a name="field-cancel-reason">Cancel Reason</a></a></h4>
+<p>Alasan Pembatalan.</p>
+<h4><a class="header" href="#a-namefield-activeactivea-1" id="a-namefield-activeactivea-1"><a name="field-active">Active</a></a></h4>
+<p>Status aktif Cancel Reason.</p>
+<h3><a class="header" href="#a-nametab-notestab-notesa" id="a-nametab-notestab-notesa"><a name="tab-notes">TAB NOTES</a></a></h3>
+<p><img src="cancel-reason/../img/cancel-reason/tab-notes.png" alt="" /></p>
+<p>Catatan.</p>
+<h1><a class="header" href="#membuat-cancel-reason" id="membuat-cancel-reason">Membuat Cancel Reason</a></h1>
+<h2><a class="header" href="#a-input-15" id="a-input-15">A. INPUT</a></h2>
+<p><em>(Tidak ada instruksi khusus)</em></p>
+<h2><a class="header" href="#b-langkah-kerja-15" id="b-langkah-kerja-15">B. LANGKAH KERJA</a></h2>
+<ol>
+<li>Buka menu <strong>Setting -&gt; Cancel Reason -&gt; Cancel Reason</strong>. Abaikan jika sudah berada pada menu yang dimaksud.</li>
+<li>Klik tombol <strong>Create</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="cancel-reason/../img/cancel-reason/tombol-create.png" alt="" /></p>
+<ol start="3">
+<li>Isi <strong><a href="cancel-reason/./penjelasan.html#field-cancel-reason">Cancel Reason</a></strong>. Wajib diisi.</li>
+<li>Aktifkan/ Deaktifkan <strong><a href="cancel-reason/./penjelasan.html#field-active">Active</a></strong>. Tidak wajib diisi.</li>
+<li>Beralih ke tab <strong><a href="cancel-reason/./penjelasan.html#tab-notes">Notes</a></strong>.</li>
+<li>Isi <strong><a href="cancel-reason/./penjelasan.html#tab-notes">Notes</a></strong>. Tidak wajib diisi.</li>
+<li>Klik tombol <strong>Save</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="cancel-reason/../img/cancel-reason/tombol-save.png" alt="" /></p>
+<h2><a class="header" href="#c-output-15" id="c-output-15">C. OUTPUT</a></h2>
+<p><em>(Tidak ada instruksi khusus)</em></p>
+<h1><a class="header" href="#memodifikasi-cancel-reason" id="memodifikasi-cancel-reason">Memodifikasi Cancel Reason</a></h1>
+<h2><a class="header" href="#a-input-16" id="a-input-16">A. INPUT</a></h2>
+<p><em>(Tidak ada instruksi khusus)</em></p>
+<h2><a class="header" href="#b-langkah-kerja-16" id="b-langkah-kerja-16">B. LANGKAH KERJA</a></h2>
+<ol>
+<li>Buka menu <strong>Setting -&gt; Cancel Reason -&gt; Cancel Reason</strong>. Abaikan jika sudah berada pada menu yang dimaksud.</li>
+<li>Buka data <em>Cancel Reason</em> yang akan dimodifikasi. Abaikan jika data sudah dibuka.</li>
+<li>Klik tombol <strong>Edit</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="cancel-reason/../img/cancel-reason/tombol-edit.png" alt="" /></p>
+<ol start="4">
+<li>Isi dan sesuaikan <strong><a href="cancel-reason/./penjelasan.html#field-cancel-reason">Cancel Reason</a></strong> jika dibutuhkan. Wajib diisi.</li>
+<li>Aktifkan/ Deaktifkan <strong><a href="cancel-reason/./penjelasan.html#field-active">Active</a></strong> jika dibutuhkan. Tidak wajib diisi.</li>
+<li>Beralih ke tab <strong><a href="cancel-reason/./penjelasan.html#tab-notes">Notes</a></strong>.</li>
+<li>Isi dan sesuaikan <strong><a href="cancel-reason/./penjelasan.html#tab-notes">Notes</a></strong> jika dibutuhkan. Tidak wajib diisi.</li>
+<li>Klik tombol <strong>Save</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="cancel-reason/../img/cancel-reason/tombol-save-modifikasi.png" alt="" /></p>
+<h2><a class="header" href="#c-output-16" id="c-output-16">C. OUTPUT</a></h2>
+<ul>
+<li>Data Cancel Reason akan berubah sesuai dengan perubahan yang dilakukan.</li>
+</ul>
+<h1><a class="header" href="#menonaktifkan-cancel-reason" id="menonaktifkan-cancel-reason">Menonaktifkan Cancel Reason</a></h1>
+<h2><a class="header" href="#a-input-17" id="a-input-17">A. INPUT</a></h2>
+<ul>
+<li>Data <em>Cancel Reason</em> yang akan dinonaktifkan harus memiliki status <strong>Active</strong></li>
+</ul>
+<p><img src="cancel-reason/../img/cancel-reason/status-input-cancel-reason-active.png" alt="" /></p>
+<h2><a class="header" href="#b-langkah-kerja-17" id="b-langkah-kerja-17">B. LANGKAH KERJA</a></h2>
+<ol>
+<li>Buka menu <strong>Setting -&gt; Cancel Reason -&gt; Cancel Reason</strong>. Abaikan jika sudah berada pada menu yang dimaksud.</li>
+<li>Buka data <em>Cancel Reason</em> yang akan dinonaktifkan. Abaikan jika data sudah dibuka.</li>
+<li>Klik tombol <strong>Edit</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="cancel-reason/../img/cancel-reason/tombol-edit.png" alt="" /></p>
+<ol start="4">
+<li>
+<p>Deaktifkan <strong><a href="cancel-reason/./penjelasan.html#field-active">Active</a></strong>.</p>
+</li>
+<li>
+<p>Klik tombol <strong>Save</strong> pada bagian atas-kiri form.</p>
+</li>
+</ol>
+<p><img src="cancel-reason/../img/cancel-reason/tombol-save-modifikasi.png" alt="" /></p>
+<h2><a class="header" href="#c-output-17" id="c-output-17">C. OUTPUT</a></h2>
+<ul>
+<li>Data Cancel Reason akan non aktif.</li>
+</ul>
+<h1><a class="header" href="#menghapus-cancel-reason" id="menghapus-cancel-reason">Menghapus Cancel Reason</a></h1>
+<h2><a class="header" href="#a-input-18" id="a-input-18">A. INPUT</a></h2>
+<p><em>(Tidak ada instruksi khusus)</em></p>
+<h2><a class="header" href="#b-langkah-kerja-18" id="b-langkah-kerja-18">B. LANGKAH KERJA</a></h2>
+<ol>
+<li>Buka menu <strong>Setting -&gt; Cancel Reason -&gt; Cancel Reason</strong>. Abaikan jika sudah berada pada menu yang dimaksud.</li>
+<li>Buka data <em>Cancel Reason</em> yang akan dihapus. Abaikan jika data sudah dibuka.</li>
+<li>Klik tombol <strong>More</strong> pada bagian atas-tengah form.</li>
+</ol>
+<p><img src="cancel-reason/../img/cancel-reason/tombol-more.png" alt="" /></p>
+<ol start="4">
+<li>Klik tombol <strong>Delete</strong> pada <em>dropdown</em> yang muncul ketika tombol <strong>More</strong> diklik.</li>
+</ol>
+<p><img src="cancel-reason/../img/cancel-reason/tombol-more-delete.png" alt="" /></p>
+<ol start="5">
+<li>Klik tombol <strong>Ok</strong> pada <em>pop-up</em> konfirmasi penghapusan yang muncul.</li>
+</ol>
+<p><img src="cancel-reason/../img/cancel-reason/pop-up-konfirmasi-delete.png" alt="" /></p>
+<h2><a class="header" href="#c-output-18" id="c-output-18">C. OUTPUT</a></h2>
+<ul>
+<li>Data Cancel Reason akan terhapus.</li>
+</ul>
+<h1><a class="header" href="#cancel-reason-configuration" id="cancel-reason-configuration">Cancel Reason Configuration</a></h1>
+<p><strong>Cancel Reason Configuration</strong> adalah fitur yang digunakan untuk mengatur konfigurasi Cancel Reason.</p>
+<ul>
+<li><a href="./cancel-reason-configurator/penjelasan.html">Penjelasan Cancel Reason Configuration</a></li>
+<li><a href="./cancel-reason-configurator/memodifikasi.html">Memodifikasi Cancel Reason Configuration</a></li>
+<li>Menambah Cancel Reason</li>
+<li>Menghapus Cancel Reason</li>
+</ul>
+<h1><a class="header" href="#penjelasan-cancel-reason-configuration" id="penjelasan-cancel-reason-configuration">Penjelasan Cancel Reason Configuration</a></h1>
+<p>Informasi pada Menu Cancel Reason Configurator dibagi menjadi beberapa area, diantaranya:</p>
+<ul>
+<li><a href="cancel-reason-configurator/penjelasan.html#bagian-header">Header</a></li>
+<li><a href="cancel-reason-configurator/penjelasan.html#tab-reasons">Tab Reasons</a></li>
+<li><a href="cancel-reason-configurator/penjelasan.html#tab-notes">Tab Notes</a></li>
+</ul>
+<h3><a class="header" href="#a-namebagian-headerheadera-3" id="a-namebagian-headerheadera-3"><a name="bagian-header">HEADER</a></a></h3>
+<p><img src="cancel-reason-configurator/../img/cancel-reason-configurator/header.png" alt="" /></p>
+<h4><a class="header" href="#a-namefield-modelmodela" id="a-namefield-modelmodela"><a name="field-model">Model</a></a></h4>
+<p>Model Cancel Reason Configuration.</p>
+<h4><a class="header" href="#a-namefield-method-cancel-namemethod-cancel-namea" id="a-namefield-method-cancel-namemethod-cancel-namea"><a name="field-method-cancel-name">Method Cancel Name</a></a></h4>
+<p>Nama metode pembatalan.</p>
+<h4><a class="header" href="#a-namefield-activeactivea-2" id="a-namefield-activeactivea-2"><a name="field-active">Active</a></a></h4>
+<p>Status aktif Cancel Reason Configuration.</p>
+<h3><a class="header" href="#a-nametab-reasonstab-reasonsa" id="a-nametab-reasonstab-reasonsa"><a name="tab-reasons">TAB REASONS</a></a></h3>
+<p><img src="cancel-reason-configurator/../img/cancel-reason-configurator/tab-reasons.png" alt="" /></p>
+<h4><a class="header" href="#a-namefield-cancel-reasoncancel-reasona-1" id="a-namefield-cancel-reasoncancel-reasona-1"><a name="field-cancel-reason">Cancel Reason</a></a></h4>
+<p>Item Cancel Reason yang digunakan.</p>
+<h4><a class="header" href="#a-namefield-reasons-activeactivea" id="a-namefield-reasons-activeactivea"><a name="field-reasons-active">Active</a></a></h4>
+<p>Status aktif item Cancel Reason yang digunakan.</p>
+<h3><a class="header" href="#a-nametab-notestab-notesa-1" id="a-nametab-notestab-notesa-1"><a name="tab-notes">TAB NOTES</a></a></h3>
+<p><img src="cancel-reason-configurator/../img/cancel-reason-configurator/tab-notes.png" alt="" /></p>
+<p>Catatan.</p>
+<h1><a class="header" href="#memodifikasi-cancel-reason-configuration" id="memodifikasi-cancel-reason-configuration">Memodifikasi Cancel Reason Configuration</a></h1>
+<h2><a class="header" href="#a-input-19" id="a-input-19">A. INPUT</a></h2>
+<p><em>(Tidak ada instruksi khusus)</em></p>
+<h2><a class="header" href="#b-langkah-kerja-19" id="b-langkah-kerja-19">B. LANGKAH KERJA</a></h2>
+<ol>
+<li>Buka menu <strong>Setting -&gt; Cancel Reason -&gt; Cancel Reason Configuration</strong>. Abaikan jika sudah berada pada menu yang dimaksud.</li>
+<li>Buka data <em>Cancel Reason Configuration</em> yang akan dimodifikasi. Abaikan jika data sudah dibuka.</li>
+<li>Klik tombol <strong>Edit</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="cancel-reason-configurator/../img/cancel-reason-configurator/tombol-edit.png" alt="" /></p>
+<ol start="4">
+<li>Beralih ke tab <strong><a href="cancel-reason-configurator/./penjelasan.html#tab-reasons">Reasons</a></strong>.</li>
+<li>Tambah/Hapus <strong>Cancel Reason</strong>. Ulangi langkah ini sampai <strong>Cancel Reason</strong> sesuai dengan keinginan.</li>
+<li>Beralih ke tab <strong><a href="cancel-reason-configurator/./penjelasan.html#tab-notes">Notes</a></strong>.</li>
+<li>Isi dan sesuaikan <strong><a href="cancel-reason-configurator/./penjelasan.html#tab-notes">Notes</a></strong> jika dibutuhkan. Tidak wajib diisi.</li>
+<li>Klik tombol <strong>Save</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="cancel-reason-configurator/../img/cancel-reason-configurator/tombol-save-modifikasi.png" alt="" /></p>
+<h2><a class="header" href="#c-output-19" id="c-output-19">C. OUTPUT</a></h2>
+<ul>
+<li>Data Cancel Reason Configuration akan berubah sesuai dengan perubahan yang dilakukan.</li>
+</ul>
+<h1><a class="header" href="#audit-rules" id="audit-rules">Audit Rules</a></h1>
+<p><strong>Audit Rules</strong> adalah fitur yang digunakan untuk mengatur model aturan pelacakan sistem atas perubahan yang dilakukan oleh User.</p>
+<ul>
+<li><a href="./audit-rules/penjelasan.html">Penjelasan Audit Rules</a></li>
+<li><a href="./audit-rules/membuat.html">Membuat Audit Rules</a></li>
+<li><a href="./audit-rules/memodifikasi.html">Memodifikasi Audit Rules</a></li>
+<li><a href="./audit-rules/menghapus.html">Menghapus Audit Rules</a></li>
+<li><a href="./audit-rules/menerapkan.html">Menerapkan Audit Rules</a></li>
+<li><a href="./audit-rules/mematikan.html">Mematikan Audit Rules</a></li>
+</ul>
+<h1><a class="header" href="#penjelasan-audit-rules" id="penjelasan-audit-rules">Penjelasan Audit Rules</a></h1>
+<p>Informasi pada Menu Audit Rules dibagi menjadi beberapa area, diantaranya:</p>
+<ul>
+<li><a href="audit-rules/penjelasan.html#bagian-header">Header</a></li>
+</ul>
+<h3><a class="header" href="#a-namebagian-headerheadera-4" id="a-namebagian-headerheadera-4"><a name="bagian-header">HEADER</a></a></h3>
+<p><img src="audit-rules/../img/audit-rules/header.png" alt="" /></p>
+<h4><a class="header" href="#a-namefield-namenamea-2" id="a-namefield-namenamea-2"><a name="field-name">Name</a></a></h4>
+<p>Nama Audit Rules.</p>
+<h4><a class="header" href="#a-namefield-modelmodela-1" id="a-namefield-modelmodela-1"><a name="field-model">Model</a></a></h4>
+<p>Model Audit Rules yang digunakan.</p>
+<h3><a class="header" href="#a-namefield-typetypea" id="a-namefield-typetypea"><a name="field-type">Type</a></a></h3>
+<p>Tipe Log.</p>
+<h4><a class="header" href="#a-namefield-actionactiona" id="a-namefield-actionactiona"><a name="field-action">Action</a></a></h4>
+<p>Tindakan yang dilakukan.</p>
+<h3><a class="header" href="#a-namefield-log-readslog-readsa" id="a-namefield-log-readslog-readsa"><a name="field-log-reads">Log Reads</a></a></h3>
+<p>Status aktif Log Reads.</p>
+<h3><a class="header" href="#a-namefield-log-writeslog-writesa" id="a-namefield-log-writeslog-writesa"><a name="field-log-writes">Log Writes</a></a></h3>
+<p>Status aktif Log Writes.</p>
+<h3><a class="header" href="#a-namefield-log-deleteslog-deletesa" id="a-namefield-log-deleteslog-deletesa"><a name="field-log-deletes">Log Deletes</a></a></h3>
+<p>Status aktif Log Deletes.</p>
+<h3><a class="header" href="#a-namefield-log-createslog-createsa" id="a-namefield-log-createslog-createsa"><a name="field-log-creates">Log Creates</a></a></h3>
+<p>Status aktif Log Creates.</p>
+<h3><a class="header" href="#a-namefield-log-methodslog-methodsa" id="a-namefield-log-methodslog-methodsa"><a name="field-log-methods">Log Methods</a></a></h3>
+<p>Status aktif Log Methods.</p>
+<h1><a class="header" href="#membuat-audit-rules" id="membuat-audit-rules">Membuat Audit Rules</a></h1>
+<h2><a class="header" href="#a-input-20" id="a-input-20">A. INPUT</a></h2>
+<p><em>(Tidak ada instruksi khusus)</em></p>
+<h2><a class="header" href="#b-langkah-kerja-20" id="b-langkah-kerja-20">B. LANGKAH KERJA</a></h2>
+<ol>
+<li>Buka menu <strong>Reporting -&gt; Audit -&gt; Rules</strong>. Abaikan jika sudah berada pada menu yang dimaksud.</li>
+<li>Klik tombol <strong>Create</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="audit-rules/../img/audit-rules/tombol-create.png" alt="" /></p>
+<ol start="3">
+<li>Isi <strong><a href="audit-rules/./penjelasan.html#field-name">Name</a></strong>. Wajib diisi.</li>
+<li>Pilih <strong><a href="audit-rules/./penjelasan.html#field-model">Model</a></strong>. Wajib diisi.</li>
+<li>Pilih <strong><a href="audit-rules/./penjelasan.html#field-type">Type</a></strong>. Wajib diisi.</li>
+<li>Aktifkan/ Deaktifkan <strong><a href="audit-rules/./penjelasan.html#field-log-reads">Log Reads</a></strong>. Tidak wajib diisi.</li>
+<li>Aktifkan/ Deaktifkan <strong><a href="audit-rules/./penjelasan.html#field-log-writes">Log Writes</a></strong>. Tidak wajib diisi.</li>
+<li>Aktifkan/ Deaktifkan <strong><a href="audit-rules/./penjelasan.html#field-log-deletes">Log Deletes</a></strong>. Tidak wajib diisi.</li>
+<li>Aktifkan/ Deaktifkan <strong><a href="audit-rules/./penjelasan.html#field-log-creates">Log Creates</a></strong>. Tidak wajib diisi.</li>
+<li>Aktifkan/ Deaktifkan <strong><a href="audit-rules/./penjelasan.html#field-log-methods">Log Methods</a></strong>. Tidak wajib diisi.</li>
+<li>Klik tombol <strong>Save</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="audit-rules/../img/audit-rules/tombol-save.png" alt="" /></p>
+<h2><a class="header" href="#c-output-20" id="c-output-20">C. OUTPUT</a></h2>
+<p><em>(Tidak ada instruksi khusus)</em></p>
+<h1><a class="header" href="#memodifikasi-audit-rules" id="memodifikasi-audit-rules">Memodifikasi Audit Rules</a></h1>
+<h2><a class="header" href="#a-input-21" id="a-input-21">A. INPUT</a></h2>
+<p><em>(Tidak ada instruksi khusus)</em></p>
+<h2><a class="header" href="#b-langkah-kerja-21" id="b-langkah-kerja-21">B. LANGKAH KERJA</a></h2>
+<ol>
+<li>Buka menu <strong>Reporting -&gt; Audit -&gt; Rules</strong>. Abaikan jika sudah berada pada menu yang dimaksud.</li>
+<li>Buka data <em>Audit Rules</em> yang akan dimodifikasi. Abaikan jika data sudah dibuka.</li>
+<li>Klik tombol <strong>Edit</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="audit-rules/../img/audit-rules/tombol-edit.png" alt="" /></p>
+<ol start="4">
+<li>Isi dan sesuaikan <strong><a href="audit-rules/./penjelasan.html#field-name">Name</a></strong> jika dibutuhkan. Wajib diisi.</li>
+<li>Pilih dan sesuaikan <strong><a href="audit-rules/./penjelasan.html#field-model">Model</a></strong> jika dibutuhkan. Wajib diisi.</li>
+<li>Pilih dan sesuaikan <strong><a href="audit-rules/./penjelasan.html#field-type">Type</a></strong> jika dibutuhkan. Wajib diisi.</li>
+<li>Aktifkan/ Deaktifkan <strong><a href="audit-rules/./penjelasan.html#field-log-reads">Log Reads</a></strong> jika dibutuhkan. Tidak wajib diisi.</li>
+<li>Aktifkan/ Deaktifkan <strong><a href="audit-rules/./penjelasan.html#field-log-writes">Log Writes</a></strong> jika dibutuhkan. Tidak wajib diisi.</li>
+<li>Aktifkan/ Deaktifkan <strong><a href="audit-rules/./penjelasan.html#field-log-deletes">Log Deletes</a></strong> jika dibutuhkan. Tidak wajib diisi.</li>
+<li>Aktifkan/ Deaktifkan <strong><a href="audit-rules/./penjelasan.html#field-log-creates">Log Creates</a></strong> jika dibutuhkan. Tidak wajib diisi.</li>
+<li>Aktifkan/ Deaktifkan <strong><a href="audit-rules/./penjelasan.html#field-log-methods">Log Methods</a></strong> jika dibutuhkan. Tidak wajib diisi.</li>
+<li>Klik tombol <strong>Save</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="audit-rules/../img/audit-rules/tombol-save-modifikasi.png" alt="" /></p>
+<h2><a class="header" href="#c-output-21" id="c-output-21">C. OUTPUT</a></h2>
+<ul>
+<li>Data Audit Rules akan berubah sesuai dengan perubahan yang dilakukan.</li>
+</ul>
+<h1><a class="header" href="#menghapus-audit-rules" id="menghapus-audit-rules">Menghapus Audit Rules</a></h1>
+<h2><a class="header" href="#a-input-22" id="a-input-22">A. INPUT</a></h2>
+<p><em>(Tidak ada instruksi khusus)</em></p>
+<h2><a class="header" href="#b-langkah-kerja-22" id="b-langkah-kerja-22">B. LANGKAH KERJA</a></h2>
+<ol>
+<li>Buka menu <strong>Reporting -&gt; Audit -&gt; Rules</strong>. Abaikan jika sudah berada pada menu yang dimaksud.</li>
+<li>Buka data <em>Audit Rules</em> yang akan dihapus. Abaikan jika data sudah dibuka.</li>
+<li>Klik tombol <strong>More</strong> pada bagian atas-tengah form.</li>
+</ol>
+<p><img src="audit-rules/../img/audit-rules/tombol-more.png" alt="" /></p>
+<ol start="4">
+<li>Klik tombol <strong>Delete</strong> pada <em>dropdown</em> yang muncul ketika tombol <strong>More</strong> diklik.</li>
+</ol>
+<p><img src="audit-rules/../img/audit-rules/tombol-more-delete.png" alt="" /></p>
+<ol start="5">
+<li>Klik tombol <strong>Ok</strong> pada <em>pop-up</em> konfirmasi penghapusan yang muncul.</li>
+</ol>
+<p><img src="audit-rules/../img/audit-rules/pop-up-konfirmasi-delete.png" alt="" /></p>
+<h2><a class="header" href="#c-output-22" id="c-output-22">C. OUTPUT</a></h2>
+<ul>
+<li>Data Audit Rules akan terhapus.</li>
+</ul>
+<h1><a class="header" href="#menerapkan-audit-rules" id="menerapkan-audit-rules">Menerapkan Audit Rules</a></h1>
+<h2><a class="header" href="#a-input-23" id="a-input-23">A. INPUT</a></h2>
+<ul>
+<li>Data <em>Audit Rules</em> yang akan diterapkan harus memiliki status <strong>Draft</strong></li>
+</ul>
+<p><img src="audit-rules/../img/audit-rules/status-input-draft.png" alt="" /></p>
+<h2><a class="header" href="#b-langkah-kerja-23" id="b-langkah-kerja-23">B. LANGKAH KERJA</a></h2>
+<ol>
+<li>Buka menu <strong>Reporting -&gt; Audit -&gt; Rules</strong>. Abaikan jika sudah berada pada menu yang dimaksud.</li>
+<li>Buka data <em>Audit Rules</em> yang akan diterapkan. Abaikan jika data sudah dibuka.</li>
+<li>Klik tombol <strong>Subscribe</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="audit-rules/../img/audit-rules/tombol-subscribe.png" alt="" /></p>
+<h2><a class="header" href="#c-output-23" id="c-output-23">C. OUTPUT</a></h2>
+<ul>
+<li>Data Audit Rules akan diterapkan dalam sistem.</li>
+</ul>
+<h1><a class="header" href="#mematikan-audit-rules" id="mematikan-audit-rules">Mematikan Audit Rules</a></h1>
+<h2><a class="header" href="#a-input-24" id="a-input-24">A. INPUT</a></h2>
+<ul>
+<li>Data <em>Audit Rules</em> yang akan dimatikan harus memiliki status <strong>Subscribed</strong>.</li>
+</ul>
+<p><img src="audit-rules/../img/audit-rules/status-input-subscribed.png" alt="" /></p>
+<h2><a class="header" href="#b-langkah-kerja-24" id="b-langkah-kerja-24">B. LANGKAH KERJA</a></h2>
+<ol>
+<li>Buka menu <strong>Reporting -&gt; Audit -&gt; Rules</strong>. Abaikan jika sudah berada pada menu yang dimaksud.</li>
+<li>Buka data <em>Audit Rules</em> yang akan dimatikan. Abaikan jika data sudah dibuka.</li>
+<li>Klik tombol <strong>Unsubscribe</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="audit-rules/../img/audit-rules/tombol-unsubscribe.png" alt="" /></p>
+<h2><a class="header" href="#c-output-24" id="c-output-24">C. OUTPUT</a></h2>
+<ul>
+<li>Data Audit Rules akan dimatikan dalam sistem.</li>
+</ul>
+<h1><a class="header" href="#sequence" id="sequence">Sequence</a></h1>
+<p><strong>Sequence</strong> adalah fitur yang digunakan untuk mengatur penomoran dokumen transaksi.</p>
+<ul>
+<li><a href="./sequence/penjelasan.html">Penjelasan Sequence</a></li>
+<li><a href="./sequence/membuat.html">Membuat Sequence</a></li>
+<li><a href="./sequence/memodifikasi.html">Memodifikasi Sequence</a></li>
+<li><a href="./sequence/menghapus.html">Menghapus Sequence</a></li>
+<li><a href="./sequence/menonaktifkan.html">Menonaktifkan Sequence</a></li>
+<li><a href="./sequence/membuat-cron.html">Membuat Cron Untuk Mereset Sequence</a></li>
+</ul>
+<h1><a class="header" href="#penjelasan-sequence" id="penjelasan-sequence">Penjelasan Sequence</a></h1>
+<p>Informasi pada Menu User dibagi menjadi beberapa area, diantaranya:</p>
+<ul>
+<li><a href="sequence/penjelasan.html#bagian-header">Header</a></li>
+<li><a href="sequence/penjelasan.html#tab-sequence">Tab Sequence</a></li>
+<li><a href="sequence/penjelasan.html#tab-fiscal-years">Tab Fiscal Years</a></li>
+<li><a href="sequence/penjelasan.html#tab-cron">Tab Cron</a></li>
+</ul>
+<h3><a class="header" href="#a-namebagian-headerheadera-5" id="a-namebagian-headerheadera-5"><a name="bagian-header">HEADER</a></a></h3>
+<p><img src="sequence/../img/sequence/header.png" alt="" /></p>
+<h4><a class="header" href="#a-namefield-namenamea-3" id="a-namefield-namenamea-3"><a name="field-name">Name</a></a></h4>
+<p>Nama Sequence.</p>
+<h4><a class="header" href="#a-namefield-companycompanya" id="a-namefield-companycompanya"><a name="field-company">Company</a></a></h4>
+<p>Perusahaan yang menggunakan sequence.</p>
+<h4><a class="header" href="#a-namefield-sequence-typesequence-typea" id="a-namefield-sequence-typesequence-typea"><a name="field-sequence-type">Sequence Type</a></a></h4>
+<p>Tipe sequence.</p>
+<h4><a class="header" href="#a-namefield-activeactivea-3" id="a-namefield-activeactivea-3"><a name="field-active">Active</a></a></h4>
+<p>Penanda status sequence aktif.</p>
+<h3><a class="header" href="#a-nametab-sequencetab-sequencea" id="a-nametab-sequencetab-sequencea"><a name="tab-sequence">TAB SEQUENCE</a></a></h3>
+<p><img src="sequence/../img/sequence/tab-sequence.png" alt="" /></p>
+<h4><a class="header" href="#a-namefield-prefixprefixa" id="a-namefield-prefixprefixa"><a name="field-prefix">Prefix</a></a></h4>
+<p>Karakter yang digunakan sebelum nomor urut dokumen.</p>
+<h4><a class="header" href="#a-namefield-suffixsuffixa" id="a-namefield-suffixsuffixa"><a name="field-suffix">Suffix</a></a></h4>
+<p>Karakter yang digunakan setelah nomor urut dokumen.</p>
+<h4><a class="header" href="#a-namefield-number-paddingnumber-paddinga" id="a-namefield-number-paddingnumber-paddinga"><a name="field-number-padding">Number Padding</a></a></h4>
+<p>Jumlah karakter nomor dokumen.</p>
+<h4><a class="header" href="#a-namefield-next-numbernext-numbera" id="a-namefield-next-numbernext-numbera"><a name="field-next-number">Next Number</a></a></h4>
+<p>Nomor urut dokumen yang digunakan pada transaksi selanjutnya.</p>
+<h4><a class="header" href="#a-namefield-increment-numberincrement-numbera" id="a-namefield-increment-numberincrement-numbera"><a name="field-increment-number">Increment Number</a></a></h4>
+<p>Nilai yang ditambahkan pada Next Number setelah transaksi menghasilkan nomor dokumen.</p>
+<h4><a class="header" href="#a-namefield-implementationimplementationa" id="a-namefield-implementationimplementationa"><a name="field-implementation">Implementation</a></a></h4>
+<p>Skenario implementasi urutan nomor dokumen.</p>
+<h3><a class="header" href="#a-nametab-fiscal-yearstab-fiscal-yearsa" id="a-nametab-fiscal-yearstab-fiscal-yearsa"><a name="tab-fiscal-years">TAB FISCAL YEARS</a></a></h3>
+<p><img src="sequence/../img/sequence/tab-fiscal-years.png" alt="" /></p>
+<h4><a class="header" href="#a-namefield-fiscal-yearfiscal-yeara" id="a-namefield-fiscal-yearfiscal-yeara"><a name="field-fiscal-year">Fiscal Year</a></a></h4>
+<p>Tahun fiskal implementasi sequence.</p>
+<h4><a class="header" href="#a-namefield-sequencesequencea" id="a-namefield-sequencesequencea"><a name="field-sequence">Sequence</a></a></h4>
+<p>Sequence yang digunakan pada tahun fiskal.</p>
+<h3><a class="header" href="#a-nametab-crontab-crona" id="a-nametab-crontab-crona"><a name="tab-cron">TAB CRON</a></a></h3>
+<p><img src="sequence/../img/sequence/tab-cron.png" alt="" /></p>
+<h4><a class="header" href="#a-namefield-croncrona" id="a-namefield-croncrona"><a name="field-cron">Cron</a></a></h4>
+<p>Pengaturan reset sequence untuk periode tertentu.</p>
+<h1><a class="header" href="#membuat-sequence" id="membuat-sequence">Membuat Sequence</a></h1>
+<h2><a class="header" href="#a-input-25" id="a-input-25">A. INPUT</a></h2>
+<p><em>(Tidak ada instruksi khusus)</em></p>
+<h2><a class="header" href="#b-langkah-kerja-25" id="b-langkah-kerja-25">B. LANGKAH KERJA</a></h2>
+<ol>
+<li>Buka menu <strong>Setting -&gt; Technical -&gt; Sequences &amp; Identifiers -&gt; Sequences</strong>. Abaikan jika sudah berada pada menu yang dimaksud.</li>
+<li>Klik tombol <strong>Create</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="sequence/../img/sequence/tombol-create.png" alt="" /></p>
+<ol start="3">
+<li>Isi <strong><a href="sequence/./penjelasan.html#field-name">Name</a></strong>. Wajib diisi.</li>
+<li>Pilih <strong><a href="sequence/./penjelasan.html#field-company">Company</a></strong>. Wajib diisi.</li>
+<li>Pilih <strong><a href="sequence/./penjelasan.html#field-sequence-type">Sequence Type</a></strong>. Tidak wajib diisi.</li>
+<li>Aktifkan/ Deaktifkan <strong><a href="sequence/./penjelasan.html#field-active">Active</a></strong>. Tidak wajib diisi.</li>
+<li>Beralih ke tab <strong><a href="sequence/./penjelasan.html#tab-sequence">Sequence</a></strong>.</li>
+<li>Isi <strong><a href="sequence/./penjelasan.html#field-prefix">Prefix</a></strong>. Tidak wajib diisi.</li>
+<li>Isi <strong><a href="sequence/./penjelasan.html#field-suffix">Suffix</a></strong>. Tidak wajib diisi.</li>
+<li>Isi <strong><a href="sequence/./penjelasan.html#field-number-padding">Number Padding</a></strong>. Wajib diisi.</li>
+<li>Isi <strong><a href="sequence/./penjelasan.html#field-next-number">Next Number</a></strong>. Wajib diisi.</li>
+<li>Isi <strong><a href="sequence/./penjelasan.html#field-increment-number">Increment Number</a></strong>. Wajib diisi.</li>
+<li>Pilih <strong><a href="sequence/./penjelasan.html#field-implementation">Implementation</a></strong>. Wajib diisi.</li>
+<li>Klik tombol <strong>Save</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="sequence/../img/sequence/tombol-save.png" alt="" /></p>
+<h2><a class="header" href="#c-output-25" id="c-output-25">C. OUTPUT</a></h2>
+<p><em>(Tidak ada instruksi khusus)</em></p>
+<h1><a class="header" href="#memodifikasi-sequence" id="memodifikasi-sequence">Memodifikasi Sequence</a></h1>
+<h2><a class="header" href="#a-input-26" id="a-input-26">A. INPUT</a></h2>
+<p><em>(Tidak ada instruksi khusus)</em></p>
+<h2><a class="header" href="#b-langkah-kerja-26" id="b-langkah-kerja-26">B. LANGKAH KERJA</a></h2>
+<ol>
+<li>Buka menu <strong>Setting -&gt; Technical -&gt; Sequences &amp; Identifiers -&gt; Sequences</strong>. Abaikan jika sudah berada pada menu yang dimaksud.</li>
+<li>Buka data <em>Sequence</em> yang akan dimodifikasi. Abaikan jika data sudah dibuka.</li>
+<li>Klik tombol <strong>Edit</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="sequence/../img/sequence/tombol-edit.png" alt="" /></p>
+<ol start="4">
+<li>Isi dan sesuaikan <strong><a href="sequence/./penjelasan.html#field-name">Name</a></strong> jika dibutuhkan. Wajib diisi.</li>
+<li>Pilih dan sesuaikan <strong><a href="sequence/./penjelasan.html#field-company">Company</a></strong> jika dibutuhkan. Wajib diisi.</li>
+<li>Pilih dan sesuaikan <strong><a href="sequence/./penjelasan.html#field-sequence-type">Sequence Type</a></strong> jika dibutuhkan. Tidak wajib diisi.</li>
+<li>Aktifkan/ Deaktifkan <strong><a href="sequence/./penjelasan.html#field-active">Active</a></strong> jika dibutuhkan. Tidak wajib diisi.</li>
+<li>Beralih ke tab <strong><a href="sequence/./penjelasan.html#tab-sequence">Sequence</a></strong>.</li>
+<li>Isi dan sesuaikan <strong><a href="sequence/./penjelasan.html#field-prefix">Prefix</a></strong> jika dibutuhkan. Tidak wajib diisi.</li>
+<li>Isi dan sesuaikan <strong><a href="sequence/./penjelasan.html#field-suffix">Suffix</a></strong> jika dibutuhkan. Tidak wajib diisi.</li>
+<li>Isi dan sesuaikan <strong><a href="sequence/./penjelasan.html#field-number-padding">Number Padding</a></strong> jika dibutuhkan. Wajib diisi.</li>
+<li>Isi dan sesuaikan <strong><a href="sequence/./penjelasan.html#field-next-number">Next Number</a></strong> jika dibutuhkan. Wajib diisi.</li>
+<li>Isi dan sesuaikan <strong><a href="sequence/./penjelasan.html#field-increment-number">Increment Number</a></strong> jika dibutuhkan. Wajib diisi.</li>
+<li>Pilih dan sesuaikan <strong><a href="sequence/./penjelasan.html#field-implementation">Implementation</a></strong> jika dibutuhkan. Wajib diisi.</li>
+<li>Klik tombol <strong>Save</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="sequence/../img/sequence/tombol-save-modifikasi.png" alt="" /></p>
+<h2><a class="header" href="#c-output-26" id="c-output-26">C. OUTPUT</a></h2>
+<ul>
+<li>Data Sequence akan berubah sesuai dengan perubahan yang dilakukan.</li>
+</ul>
+<h1><a class="header" href="#menghapus-sequence" id="menghapus-sequence">Menghapus Sequence</a></h1>
+<h2><a class="header" href="#a-input-27" id="a-input-27">A. INPUT</a></h2>
+<p><em>(Tidak ada instruksi khusus)</em></p>
+<h2><a class="header" href="#b-langkah-kerja-27" id="b-langkah-kerja-27">B. LANGKAH KERJA</a></h2>
+<ol>
+<li>Buka menu <strong>Setting -&gt; Technical -&gt; Sequences &amp; Identifiers -&gt; Sequences</strong>. Abaikan jika sudah berada pada menu yang dimaksud.</li>
+<li>Buka data <em>Sequence</em> yang akan dihapus. Abaikan jika data sudah dibuka.</li>
+<li>Klik tombol <strong>More</strong> pada bagian atas-tengah form.</li>
+</ol>
+<p><img src="sequence/../img/sequence/tombol-more.png" alt="" /></p>
+<ol start="4">
+<li>Klik tombol <strong>Delete</strong> pada <em>dropdown</em> yang muncul ketika tombol <strong>More</strong> diklik.</li>
+</ol>
+<p><img src="sequence/../img/sequence/tombol-more-delete.png" alt="" /></p>
+<ol start="5">
+<li>Klik tombol <strong>Ok</strong> pada <em>pop-up</em> konfirmasi penghapusan yang muncul.</li>
+</ol>
+<p><img src="sequence/../img/sequence/pop-up-konfirmasi-delete.png" alt="" /></p>
+<h2><a class="header" href="#c-output-27" id="c-output-27">C. OUTPUT</a></h2>
+<ul>
+<li>Data Sequence akan terhapus.</li>
+</ul>
+<h1><a class="header" href="#menonaktifkan-sequence" id="menonaktifkan-sequence">Menonaktifkan Sequence</a></h1>
+<h2><a class="header" href="#a-input-28" id="a-input-28">A. INPUT</a></h2>
+<ul>
+<li>Data <em>Sequence</em> yang akan dinonaktifkan harus memiliki status <strong>Active</strong></li>
+</ul>
+<p><img src="sequence/../img/sequence/status-input-sequence-active.png" alt="" /></p>
+<h2><a class="header" href="#b-langkah-kerja-28" id="b-langkah-kerja-28">B. LANGKAH KERJA</a></h2>
+<ol>
+<li>Buka menu <strong>Setting -&gt; Technical -&gt; Sequences &amp; Identifiers -&gt; Sequences</strong>. Abaikan jika sudah berada pada menu yang dimaksud.</li>
+<li>Buka data <em>Sequence</em> yang akan dinonaktifkan. Abaikan jika data sudah dibuka.</li>
+<li>Klik tombol <strong>Edit</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="sequence/../img/sequence/tombol-edit.png" alt="" /></p>
+<ol start="4">
+<li>
+<p>Deaktifkan <strong><a href="sequence/./penjelasan.html#field-active">Active</a></strong>.</p>
+</li>
+<li>
+<p>Klik tombol <strong>Save</strong> pada bagian atas-kiri form.</p>
+</li>
+</ol>
+<p><img src="sequence/../img/sequence/tombol-save-modifikasi.png" alt="" /></p>
+<h2><a class="header" href="#c-output-28" id="c-output-28">C. OUTPUT</a></h2>
+<ul>
+<li>Data Sequence akan non aktif.</li>
+</ul>
+<h1><a class="header" href="#membuat-cron-untuk-mereset-sequence" id="membuat-cron-untuk-mereset-sequence">Membuat Cron Untuk Mereset Sequence</a></h1>
+<h2><a class="header" href="#a-input-29" id="a-input-29">A. INPUT</a></h2>
+<p><em>(Tidak ada instruksi khusus)</em></p>
+<h2><a class="header" href="#b-langkah-kerja-29" id="b-langkah-kerja-29">B. LANGKAH KERJA</a></h2>
+<ol>
+<li>Buka menu <strong>Setting -&gt; Technical -&gt; Sequences &amp; Identifiers -&gt; Sequences</strong>. Abaikan jika sudah berada pada menu yang dimaksud.</li>
+<li>Buka data <em>Sequence</em> yang akan dibuat <em>Cron</em>. Abaikan jika data sudah dibuka.</li>
+<li>Beralih ke tab <strong><a href="sequence/./penjelasan.html#tab-cron">Cron</a></strong>.</li>
+<li>Klik tombol <strong>Create Cron</strong> pada bagian atas-kiri tab.</li>
+</ol>
+<p><img src="sequence/../img/sequence/tombol-create-cron.png" alt="" /></p>
+<h2><a class="header" href="#c-output-29" id="c-output-29">C. OUTPUT</a></h2>
+<p><em>(Tidak ada instruksi khusus)</em></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
+        
+
+    </body>
+</html>
